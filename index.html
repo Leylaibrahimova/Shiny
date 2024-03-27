@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shiny Site</title>
+  <style>
+    body {
+      background-color: #000000;
+      color: #ff69b4;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      position: relative;
+    }
+
+    .container {
+      margin-top: 100px;
+    }
+
+    h1 {
+      font-size: 3em;
+      text-shadow: 4px 4px 5px rgba(252, 7, 129, 0.8);;
+    }
+
+    .btn {
+      background-color: #f01180;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      font-size: 1.2em;
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      animation: sparkle 1s linear infinite;
+    }
+
+    @keyframes sparkle {
+      0% {box-shadow: 0 0 10px #ff69b4;}
+      50% {box-shadow: 0 0 20px #ff69b4, 0 0 40px #ff69b4, 0 0 60px #ff69b4, 0 0 80px #ff69b4;}
+      100% {box-shadow: 0 0 10px #ff69b4;}
+    }
+
+    .gif {
+      position: absolute;
+      top: 90px;
+      left: 30px;
+      height: 350px; 
+    }
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>PARILTILAR ALƏMİNƏ XOŞ GƏLDİN</h1>
+    <p> İşığından ilhamlandıq 💗 </p>
+    <button class="btn">Tıkla, möcüzə başlasın!</button>
+  </div>
+
+  <img src="ballerina.gif" alt="GIF" class="gif">
+  
+  <audio id="myAudio" src="ballerina.mp3" loop></audio>
+
+  <script src="https://cdn.jsdelivr.net/npm/js-confetti@latest/dist/js-confetti.browser.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const jsConfetti = new JSConfetti();
+      
+      // Tıkla başlasın
+      document.querySelector('.btn').addEventListener('click', function() {
+        jsConfetti.addConfetti({
+          emojis: ['🌸', '🌺', '💗', '✩' ,'🤍' ,'🎀', '₊˚ʚ ᗢ₊˚✧ ﾟ.', '🤍'],
+          confettiColors: ['#fff', '#ff69b4', '#32cd32', '#4169e1', '#ff1493', '#ffd700'],
+          emojiSize: 5,
+          confettiNumber: 7000,
+        });
+        // Birinci müziği al
+        var audio1 = document.getElementById("myAudio");
+        // Birinci müziği çal
+        audio1.play();
+      });
+    });
+  </script>
+</body>
+</html>
