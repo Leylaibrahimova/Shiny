@@ -19,7 +19,7 @@
 
     h1 {
       font-size: 3em;
-      text-shadow: 4px 4px 5px rgba(252, 7, 129, 0.8);;
+      text-shadow: 4px 4px 5px rgba(252, 7, 129, 0.8);
     }
 
     .btn {
@@ -33,20 +33,14 @@
     }
 
     .btn:hover {
-      animation: sparkle 1s linear infinite;
-    }
-
-    @keyframes sparkle {
-      0% {box-shadow: 0 0 10px #ff69b4;}
-      50% {box-shadow: 0 0 20px #ff69b4, 0 0 40px #ff69b4, 0 0 60px #ff69b4, 0 0 80px #ff69b4;}
-      100% {box-shadow: 0 0 10px #ff69b4;}
+    animation: sparkle 1s linear infinite;
     }
 
     .gif {
       position: absolute;
-      top: 90px;
-      left: 30px;
-      height: 350px; 
+      top: 80px;
+      left: 65px;
+      height: 350px;
     }
 
   </style>
@@ -67,7 +61,7 @@
     document.addEventListener("DOMContentLoaded", function() {
       const jsConfetti = new JSConfetti();
       
-      // Tıkla başlasın
+      // Confetti
       document.querySelector('.btn').addEventListener('click', function() {
         jsConfetti.addConfetti({
           emojis: ['🌸', '🌺', '💗', '✩' ,'🤍' ,'🎀', '₊˚ʚ ᗢ₊˚✧ ﾟ.', '🤍'],
@@ -75,12 +69,12 @@
           emojiSize: 5,
           confettiNumber: 7000,
         });
-        // Birinci müziği al
+        
         var audio1 = document.getElementById("myAudio");
-        // Birinci müziği çal
         audio1.play();
       });
     });
+
   </script>
 </body>
 </html>
